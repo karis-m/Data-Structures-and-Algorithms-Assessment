@@ -1,3 +1,4 @@
+dictionary = {}
 def word_frequency(word):
     
     if word[-1] == '.':
@@ -8,9 +9,15 @@ def word_frequency(word):
 
     else:
         dictionary.update({word: 1})
-    
-    dictionary = {}
 
+    for keys in dictionary:
+        print (keys, end = " ")
+        print (":", end = " ")
+        print (dictionary[keys], end = " ")
+        print()
+    
+    
+if __name__ == "__main__":
     sentence = "This is a test sentence. This sentence is a test."
 	# calling the function
     lst = sentence.split()
@@ -18,5 +25,4 @@ def word_frequency(word):
     for word in lst:
         word_frequency(word)
 
-    for keys in dictionary:
-        print(keys)
+    
